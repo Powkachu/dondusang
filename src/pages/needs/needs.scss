@@ -28,22 +28,21 @@
   margin-top: 40px;
 }
 
-.blood-red {
-  color: #E50302;
-}
-
 .p-percentage {
   font-size: 65px !important;
-  top: 150px;
+  top: 265px;
 }
 
 .p-rhesus {
   font-size: 75px !important;
-  top: 220px;
+  top: 200px;
 }
 
 .p-percentage, .p-rhesus {
+    color: #E50302;
     position: absolute;
     width: 100%;
     z-index: 3000;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
 }
