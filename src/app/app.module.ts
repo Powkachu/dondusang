@@ -9,6 +9,8 @@ import { BadgesService } from '../pages/badges/badges.service';
 import { ScannComponent } from '../pages/scann/scann.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NeedsService } from '../pages/needs/needs.service';
+import { DisplayScanComponent } from '../pages/display-scan/display-scan.component'
+import { ScanService } from '../pages/display-scan/scan.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { NeedsService } from '../pages/needs/needs.service';
     SignUpComponent,
     BadgesComponent,
     ScannComponent,
+    DisplayScanComponent,
     TabsPage
   ],
   imports: [
@@ -29,13 +32,15 @@ import { NeedsService } from '../pages/needs/needs.service';
     SignUpComponent,
     BadgesComponent,
     ScannComponent,
+    DisplayScanComponent,
     TabsPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SignUpService,
     NeedsService,
-    BadgesService
+    BadgesService,
+    ScanService
   ]
 })
 export class AppModule {}
