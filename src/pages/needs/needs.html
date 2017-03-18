@@ -5,7 +5,21 @@
     <div class="menu-container"> <div class="menu-badge" (click)="redirect('badge')"></div> </div>
   </div>
 
-<p>{{ avg }}</p>
+  <p class="blood-red text-center p-rhesus">{{ user.rhesus }}</p>
+  <p class="text-center p-percentage" [ngClass]="{'blood-red': avg>30 }">{{ avg }}%</p>
+
+  <div class="flexy">
+    <div class="progress vertical margin-topp2">
+        <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="avg" aria-valuemin="0" aria-valuemax="100" [style.width]="avg + '%'">
+        </div>
+    </div>
+  </div>
+
+  <div class="col-xs-offset-2 col-xs-8"><div class="play-button"><p>J'arrive</p></div></div>
+
+  <div class="col-xs-offset-4 col-xs-6">
+    <div class="running-man"></div>
+  </div>
 
 </ion-content>
 
