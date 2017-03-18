@@ -8,8 +8,7 @@ import { SignUpService }   from './sign-up.service';
 
 @Component({
   selector: 'sign-up',
-  templateUrl: 'sign-up.html',
-  styleUrls: ['/pages/sign-up/sign-up.css']
+  templateUrl: 'sign-up.html'
 })
 export class SignUpComponent 
 {
@@ -22,6 +21,7 @@ export class SignUpComponent
 
   onSubmit(value: any)
   {
+    console.log(value.value);
     let error : boolean = false;
     if (!value.value.nickname || value.value.nickname == '')
     {

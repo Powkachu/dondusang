@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { NeedsComponent } from '../needs/needs.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
-import { User } from '../../models/user';
 
 @Component({
   templateUrl: 'tabs.html'

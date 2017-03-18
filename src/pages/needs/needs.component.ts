@@ -2,15 +2,30 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 
+import { NeedsService } from './needs.service';
+import { User } from '../../models/user';
+
 @Component({
   selector: 'needs',
-  templateUrl: 'needs.html',
-  styleUrls: ['/pages/needs/needs.css']
+  templateUrl: 'needs.html'
 })
 export class NeedsComponent {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+  user : User = null;
+  avg  : number = null;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private needsService: NeedsService) {
+    this.user = JSON.parse(localStorage.getItem('user'));
+    this.needsService.getAvg('France', 'Strasbourg', this.user.rhesus).subscribe(
+        res =>
+        {
+          this.avg = res.mean;
+        },
+        err =>
+        {
+            
+        }
+    );
   }
 
 }

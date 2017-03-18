@@ -1,14 +1,5 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Inscription</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+  <!--<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
     <ion-list>
       <ion-item>
         <ion-label floating>Pseudo</ion-label>
@@ -23,18 +14,54 @@
       <ion-item class="margin-top">
         <ion-label>Rhésus</ion-label>
         <ion-select name="rhesus" ngModel>
-          <ion-option value="A+">A+</ion-option>
-          <ion-option value="A-">A-</ion-option>
-          <ion-option value="B+">B+</ion-option>
-          <ion-option value="B-">B-</ion-option>
-          <ion-option value="AB+">AB+</ion-option>
-          <ion-option value="AB-">AB-</ion-option>
-          <ion-option value="O+">O+</ion-option>
-          <ion-option value="O-">O-</ion-option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
         </ion-select>
       </ion-item>
 
-      <button ion-button block class="margin-top" tyep="submit">C'est parti</button>
+      <button ion-button block class="margin-top" type="submit">C'est parti</button>
     </ion-list>
+  </form>-->
+  <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+    <div class="col-xs-offset-2 col-xs-8 margin-topp">
+      <div class="form-group">
+        <label for="usr" class="title-3">pseudo</label>
+        <input type="text" class="form-control" name="nickname" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="pwd" class="title-3">mot de passe</label>
+        <input type="password" class="form-control"  name="password" ngModel>
+      </div>
+      <div class="form-group margin-bot">
+        <label for="rhesus" class="title-3">Groupe sanguin</label>
+      
+        <select class="form-control title-4" id="rhesus" name="rhesus" ngModel>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-xs-offset-2 col-xs-6">
+      <div class="happy-man"></div>
+    </div>
+
+    <div class="col-xs-offset-2 col-xs-8">
+      <div class="play-button">
+        <p (click)="onSubmit(signupForm)">c'est parti</p>
+      </div>
+    </div>
   </form>
 </ion-content>

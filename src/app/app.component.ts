@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { TabsPage } from '../pages/tabs/tabs';
-import { SignUpComponent } from '../pages/sign-up/sign-up.component'
+import { SignUpComponent } from '../pages/sign-up/sign-up.component';
 
 @Component({
   templateUrl: 'app.html'

@@ -5,6 +5,7 @@ import { NeedsComponent } from '../pages/needs/needs.component';
 import { SignUpComponent } from '../pages/sign-up/sign-up.component';
 import { SignUpService } from '../pages/sign-up/sign-up.service';
 import { TabsPage } from '../pages/tabs/tabs';
+import { NeedsService } from '../pages/needs/needs.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TabsPage } from '../pages/tabs/tabs';
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SignUpService
+    SignUpService,
+    NeedsService
   ]
 })
 export class AppModule {}
