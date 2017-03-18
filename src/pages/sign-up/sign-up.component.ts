@@ -5,12 +5,14 @@ import { ToastController } from 'ionic-angular';
 
 import { NeedsComponent }  from '../needs/needs.component';
 import { SignUpService }   from './sign-up.service';
+import { OnInit }          from '@angular/core';
+
 
 @Component({
   selector: 'sign-up',
   templateUrl: 'sign-up.html'
 })
-export class SignUpComponent 
+export class SignUpComponent
 {
   constructor
   (
@@ -21,7 +23,6 @@ export class SignUpComponent
 
   onSubmit(value: any)
   {
-    console.log(value.value);
     let error : boolean = false;
     if (!value.value.nickname || value.value.nickname == '')
     {
@@ -62,4 +63,12 @@ export class SignUpComponent
     });
     toast.present();
   }
+
+  ngOnInit() : void {
+    if(localStorage.getItem('user') != null) {
+      this.navController.push(NeedsComponent);
+    }
+  }
+
+
 }

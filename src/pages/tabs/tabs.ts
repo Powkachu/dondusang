@@ -14,7 +14,7 @@ export class TabsPage {
   tab2Root: any = SignUpComponent;
 
   constructor() {
-    let user = JSON.parse(localStorage.getItem('user'));
+    let user = localStorage.getItem('user');
     if (user != null)
     {
       this.connected = true;

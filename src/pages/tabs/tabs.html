@@ -1,4 +1,8 @@
-<ion-tabs [ngClass]="{'ion-tab-disabled': connected }">
-  <ion-tab [root]="tab1Root" tabTitle="Accueil" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Informations" tabIcon="information-circle"></ion-tab>
-</ion-tabs>
+<ion-header>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab [root]="tab1Root" tabTitle="Accueil" tabIcon="home"></ion-tab>
+      <ion-tab [root]="tab2Root" tabTitle="Informations" tabIcon="information-circle"></ion-tab>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-header>

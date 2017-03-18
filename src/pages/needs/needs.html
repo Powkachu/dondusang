@@ -1,14 +1,11 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Besoins</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content>
+  <div class="tabs">
+    <div class="menu-container"> <div class="menu-infos" (click)="redirect('infos')"></div> </div>
+    <div class="menu-container"> <div class="menu-home" (click)="redirect('needs')"></div> </div>
+    <div class="menu-container"> <div class="menu-badge" (click)="redirect('badge')"></div> </div>
+  </div>
 
-  <p>{{ avg }}</p>
+<p>{{ avg }}</p>
 
 </ion-content>
+
