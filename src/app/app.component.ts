@@ -4,11 +4,13 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { SignUpComponent } from '../pages/sign-up/sign-up.component';
+import { MapComponent } from '../pages/map/map.component';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   @ViewChild(Nav) nav: Nav;
 
   rootPage = SignUpComponent;
