@@ -3,12 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Besoins</ion-title>
+    <ion-title>Badges</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-
-  <p>{{ avg }}</p>
-
+<ion-content padding>
+	<li *ngFor="let badge of badges">
+    <span class="badge">{{badge.title}}</span> {{badge.title}}
+	</li>
 </ion-content>
+

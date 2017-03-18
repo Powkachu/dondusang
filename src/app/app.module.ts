@@ -4,6 +4,9 @@ import { MyApp } from './app.component';
 import { NeedsComponent } from '../pages/needs/needs.component';
 import { SignUpComponent } from '../pages/sign-up/sign-up.component';
 import { SignUpService } from '../pages/sign-up/sign-up.service';
+import { BadgesComponent } from '../pages/badges/badges.component';
+import { BadgesService } from '../pages/badges/badges.service';
+import { ScannComponent } from '../pages/scann/scann.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NeedsService } from '../pages/needs/needs.service';
 
@@ -12,6 +15,8 @@ import { NeedsService } from '../pages/needs/needs.service';
     MyApp,
     NeedsComponent,
     SignUpComponent,
+    BadgesComponent,
+    ScannComponent,
     TabsPage
   ],
   imports: [
@@ -22,12 +27,15 @@ import { NeedsService } from '../pages/needs/needs.service';
     MyApp,
     NeedsComponent,
     SignUpComponent,
+    BadgesComponent,
+    ScannComponent,
     TabsPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SignUpService,
-    NeedsService
+    NeedsService,
+    BadgesService
   ]
 })
 export class AppModule {}
