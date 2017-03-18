@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inscription</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Pseudo</ion-label>
+        <ion-input type="text" name="nickname" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Mot de passe</ion-label>
+        <ion-input type="password" name="password" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item class="margin-top">
+        <ion-label>Rhésus</ion-label>
+        <ion-select name="rhesus" ngModel>
+          <ion-option value="A+">A+</ion-option>
+          <ion-option value="A-">A-</ion-option>
+          <ion-option value="B+">B+</ion-option>
+          <ion-option value="B-">B-</ion-option>
+          <ion-option value="AB+">AB+</ion-option>
+          <ion-option value="AB-">AB-</ion-option>
+          <ion-option value="O+">O+</ion-option>
+          <ion-option value="O-">O-</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <button ion-button block class="margin-top" tyep="submit">C'est parti</button>
+    </ion-list>
+  </form>
+</ion-content>
