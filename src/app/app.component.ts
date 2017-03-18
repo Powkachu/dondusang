@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { SignUpComponent } from '../pages/sign-up/sign-up.component';
-import { DisplayScanComponent } from '../pages/display-scan/display-scan.component';
-import { MapComponent } from '../pages/map/map.component';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = DisplayScanComponent;
+
+  @ViewChild(Nav) nav: Nav;
+
+  rootPage = SignUpComponent;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -19,5 +20,11 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    this.nav.setRoot(page.component);
   }
 }

@@ -1,0 +1,47 @@
+.premier-don {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 117px;
+	height: 117px;
+}
+
+.semi-maradon{
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 105px;
+	height: 120px;
+}
+
+.donkishoot {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 127px;
+	height: 124px;
+}
+
+.maradon {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 125px;
+	height: 89px;
+}
+
+.premier-don.disabled {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 111px;
+	height: 110px;
+}
+
+.semi-maradon.disabled {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 95px;
+	height: 108px;
+}
+
+.donkishoot.disabled {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 127px;
+	height: 123px;
+}
+
+.maradon.disabled{
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 115px;
+	height: 82px;
+}

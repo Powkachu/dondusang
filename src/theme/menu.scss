@@ -1,0 +1,35 @@
+.menu-infos {
+	background: url($image-path+'/sprite1.svg') no-repeat -47px -174px;
+	width: 33px;
+	height: 50px;
+}
+
+.menu-home {
+	background: url($image-path+'/sprite1.svg') no-repeat -97px -175px;
+	width: 47px;
+	height: 49px;
+}
+
+.menu-badge {
+	background: url($image-path+'/sprite1.svg') no-repeat -157px -177px;
+	width: 40px;
+	height: 42px;
+  margin-top: 4px;
+}
+.menu-container {
+  flex-grow: 1;
+}
+
+.menu-container div {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.tabs {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: $dark-blue;
+}
