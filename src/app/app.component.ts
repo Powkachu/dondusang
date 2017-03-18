@@ -3,12 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { SignUpComponent } from '../pages/sign-up/sign-up.component';
+import { MapComponent } from '../pages/map/map.component';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = SignUpComponent;
+  rootPage = MapComponent;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
