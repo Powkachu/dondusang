@@ -35,6 +35,25 @@ export class BadgesComponent implements OnInit
     this.getBadges()
   }
 
+  redirect(component : string) : void {
+    switch(component) {
+      case 'infos':
+        break;
+      case 'needs':
+        this.navController.push(NeedsComponent);
+        break;
+      case 'badge':
+        break;
+    }
+  }
+
+  disabledClass(d : boolean) : string {
+    if(! d) {
+      return "disabled";
+    }
+    return "";
+  }
+
 }
 
 
