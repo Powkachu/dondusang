@@ -4,6 +4,7 @@ import { OnInit } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { Geolocation } from 'ionic-native';
 
 import { DisplayScanComponent } from '../display-scan/display-scan.component';
 import { EntityService } from './entity.service';
@@ -32,25 +33,19 @@ export class MapComponent {
   getNearestEntity(): void {
     let that: MapComponent = this;
     let gotPosition = false;
-    navigator.geolocation.getCurrentPosition(function (pos) {
-      if (!gotPosition) {
-        gotPosition = true;
-      } else {
-        return;
-      }
-      that.entityService.getNearest(pos.coords.longitude, pos.coords.latitude).subscribe(
+    Geolocation.getCurrentPosition().then((position) => {
+      that.entityService.getNearest(position.coords.longitude, position.coords.latitude).subscribe(
         res => {
-          if (that.entity == null) {
             that.entity = res;
-            that.createMap(pos.coords.latitude, pos.coords.longitude);
-          }
+            that.createMap(position.coords.latitude, position.coords.longitude);
         },
         err => {
         }
       );
-    },
-      function (err) {
-      }, null)
+
+    }, (err) => {
+      console.log(err);
+    });
   }
 
   ionViewDidLoad() {
