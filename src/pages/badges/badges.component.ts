@@ -6,6 +6,7 @@ import { NavController }   from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 import { NeedsComponent }  from '../needs/needs.component';
+import { InfosComponent }  from '../infos/infos.component';
 import { BadgesService }   from './badges.service';
 import { Badge }           from '../../models/badge';
 
@@ -38,6 +39,7 @@ export class BadgesComponent implements OnInit
   redirect(component : string) : void {
     switch(component) {
       case 'infos':
+        this.navController.push(InfosComponent);
         break;
       case 'needs':
         this.navController.push(NeedsComponent);

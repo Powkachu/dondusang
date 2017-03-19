@@ -6,6 +6,7 @@ import { NeedsService } from './needs.service';
 import { User } from '../../models/user';
 import { MapComponent } from '../map/map.component';
 import { BadgesComponent } from '../badges/badges.component';
+import { InfosComponent } from '../infos/infos.component';
 
 @Component({
   selector: 'needs',
@@ -38,14 +39,13 @@ export class NeedsComponent {
   redirect(component : string) : void {
     switch(component) {
       case 'infos':
+        this.navController.push(InfosComponent);
         break;
       case 'needs':
         break;
       case 'badge':
         this.navController.push(BadgesComponent);
         break;
-
-
     }
   }
 
