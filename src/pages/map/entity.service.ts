@@ -29,7 +29,6 @@ export class EntityService
     return this.http.get(url, options)
       .map(function (res: Response)
       {
-        console.log(res);
         return res.json() as Entity;
       })
       .catch((error: any) => Observable.throw('Server Error'));
