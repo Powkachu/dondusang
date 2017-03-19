@@ -13,6 +13,7 @@ import { AchievementComponent } from '../pages/achievement/achievement.component
 import { TabsPage } from '../pages/tabs/tabs';
 import { NeedsService } from '../pages/needs/needs.service';
 import { DisplayScanComponent } from '../pages/display-scan/display-scan.component'
+import { InfosComponent } from '../pages/infos/infos.component'
 import { ScanService } from '../pages/display-scan/scan.service';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ScanService } from '../pages/display-scan/scan.service';
     ScannComponent,
     DisplayScanComponent,
     AchievementComponent,
+    InfosComponent,
     TabsPage
   ],
   imports: [
@@ -39,6 +41,7 @@ import { ScanService } from '../pages/display-scan/scan.service';
     MapComponent,
     ScannComponent,
     DisplayScanComponent,
+    InfosComponent,
     AchievementComponent,
     TabsPage
   ],
