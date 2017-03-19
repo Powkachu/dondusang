@@ -9,6 +9,7 @@ import { BadgesService } from '../pages/badges/badges.service';
 import { MapComponent } from '../pages/map/map.component';
 import { EntityService } from '../pages/map/entity.service';
 import { ScannComponent } from '../pages/scann/scann.component';
+import { AchievementComponent } from '../pages/achievement/achievement.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NeedsService } from '../pages/needs/needs.service';
 import { DisplayScanComponent } from '../pages/display-scan/display-scan.component'
@@ -23,6 +24,7 @@ import { ScanService } from '../pages/display-scan/scan.service';
     MapComponent,
     ScannComponent,
     DisplayScanComponent,
+    AchievementComponent,
     TabsPage
   ],
   imports: [
@@ -37,6 +39,7 @@ import { ScanService } from '../pages/display-scan/scan.service';
     MapComponent,
     ScannComponent,
     DisplayScanComponent,
+    AchievementComponent,
     TabsPage
   ],
   providers: [

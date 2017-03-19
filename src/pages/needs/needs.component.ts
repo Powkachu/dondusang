@@ -4,8 +4,13 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { NeedsService } from './needs.service';
 import { User } from '../../models/user';
+<<<<<<< HEAD
 import { BadgesComponent} from '../badges/badges.component';
 import { MapComponent } from '../map/map.component';
+=======
+import { BadgesComponent } from '../badges/badges.component';
+import { AchievementComponent } from '../achievement/achievement.component';
+>>>>>>> 8ff8e2d3f6d8dd1fc59d60c712a468b21f8a058d
 
 @Component({
   selector: 'needs',
