@@ -5,7 +5,7 @@ import { OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
-import { NeedsComponent } from '../needs/needs.component';
+import { DisplayScanComponent } from '../display-scan/display-scan.component';
 import { EntityService } from './entity.service';
 import { Entity } from '../../models/entity';
 
@@ -84,16 +84,8 @@ export class MapComponent {
     });
   }
 
-  addInfoWindow(marker, content) {
-
-    let infoWindow = new google.maps.InfoWindow({
-      content: content
-    });
-
-    google.maps.event.addListener(marker, 'click', () => {
-      infoWindow.open(this.map, marker);
-    });
-
+  next() {
+    this.navController.push(DisplayScanComponent);
   }
 
 }
