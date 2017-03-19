@@ -49,7 +49,7 @@ export class MapComponent {
   }
 
   ionViewDidLoad() {
-    this.getNearestEntity();
+    //this.getNearestEntity();
   }
 
   createMap(latitude: number, longitude: number) {
