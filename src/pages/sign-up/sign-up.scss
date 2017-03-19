@@ -2,6 +2,10 @@
     margin-top: 20px;
 }
 
+#content-signup {
+    padding-bottom: 0px !important;
+}
+
 @font-face {
     font-family: fontCR;
     src: url($font-path+'/Nickname.otf');
@@ -24,6 +28,14 @@ ion-content {
 
 #rhesus{
     font-size: x-large;
+}
+
+.play-button.button-signup {
+    margin-bottom: 190px;
+}
+
+#content-signup > .scroll-content {
+    padding-bottom: 0px !important;
 }
 
 .play-button{
@@ -85,6 +97,6 @@ ion-content {
 	background: url($image-path+'/sprite1.svg') no-repeat -34px -22px;
 	width: 183px;
 	height: 130px;
-	position: fixed;
-	bottom: 0px;
+	position: absolute;
+	bottom: -40px;
 }

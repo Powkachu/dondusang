@@ -11,6 +11,8 @@ import { EntityService } from '../pages/map/entity.service';
 import { ScannComponent } from '../pages/scann/scann.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NeedsService } from '../pages/needs/needs.service';
+import { DisplayScanComponent } from '../pages/display-scan/display-scan.component'
+import { ScanService } from '../pages/display-scan/scan.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { NeedsService } from '../pages/needs/needs.service';
     BadgesComponent,
     MapComponent,
     ScannComponent,
+    DisplayScanComponent,
     TabsPage
   ],
   imports: [
@@ -33,6 +36,7 @@ import { NeedsService } from '../pages/needs/needs.service';
     BadgesComponent,
     MapComponent,
     ScannComponent,
+    DisplayScanComponent,
     TabsPage
   ],
   providers: [
@@ -40,6 +44,7 @@ import { NeedsService } from '../pages/needs/needs.service';
     SignUpService,
     NeedsService,
     BadgesService,
+    ScanService,
     EntityService
   ]
 })

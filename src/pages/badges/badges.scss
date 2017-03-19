@@ -1,0 +1,70 @@
+.premier-don {
+	background: url($image-path+'/sprite2.svg') no-repeat -10px -22px;
+	width: 117px;
+	height: 117px;
+}
+
+.semi-maradon{
+	background: url($image-path+'/sprite2.svg') no-repeat -16px -164px;
+	width: 105px;
+	height: 120px;
+}
+
+.donkishoot {
+	background: url($image-path+'/sprite2.svg') no-repeat -5px -308px;
+	width: 127px;
+	height: 124px;
+}
+
+.maradon {
+	background: url($image-path+'/sprite2.svg') no-repeat -6px -456px;
+	width: 125px;
+	height: 89px;
+}
+
+.premier-don.disabled {
+	background: url($image-path+'/sprite2.svg') no-repeat -161px -23px;
+	width: 111px;
+	height: 110px;
+}
+
+.semi-maradon.disabled {
+	background: url($image-path+'/sprite2.svg') no-repeat -169px -164px;
+	width: 95px;
+	height: 108px;
+}
+
+.donkishoot.disabled {
+	background: url($image-path+'/sprite2.svg') no-repeat -153px -302px;
+	width: 127px;
+	height: 123px;
+}
+
+.maradon.disabled{
+	background: url($image-path+'/sprite2.svg') no-repeat -159px -455px;
+	width: 115px;
+	height: 82px;
+}
+
+.badge-item h2{
+  color: red;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.badge-item h2.disabled{
+  color: #adc8c7;
+}
+
+.badge-item div {
+  margin: auto;
+}
+
+.badges-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
