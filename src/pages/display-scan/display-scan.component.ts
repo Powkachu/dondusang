@@ -1,7 +1,12 @@
 import { Component }       from '@angular/core';
 import { ToastController } from 'ionic-angular';
 
+import { NavController, NavParams } from 'ionic-angular';
+
 import { ScanService } from './scan.service';
+import { AchievementComponent } from '../achievement/achievement.component';
+
+import { User } from '../../models/user';
 
 declare var cordova:any;
 
@@ -9,17 +14,26 @@ declare var cordova:any;
   selector: 'display-scan',
   templateUrl: 'display-scan.html'
 })
-export class DisplayScanComponent 
+export class DisplayScanComponent
 {
-  constructor(private toastCtrl: ToastController, private scanService: ScanService) {  }
+  user: User;
+  constructor(
+    private toastCtrl: ToastController,
+    private scanService: ScanService,
+    private navController: NavController
+  ) {
+    this.user = JSON.parse(localStorage.getItem('user'));
+  }
+
 
   scan()
   {
     cordova.plugins.barcodeScanner.scan((result) => {
-      this.scanService.verify(result).subscribe(
+      this.scanService.verify(result.text, this.user.id).subscribe(
           res =>
           {
-            
+            this.navController.push(AchievementComponent);
+
           },
           err =>
           {

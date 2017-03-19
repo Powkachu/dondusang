@@ -15,9 +15,9 @@ export class ScanService
 {
   constructor(private http: Http) {}
 
-  verify(code: string)
+  verify(code: string, id: number)
   {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let headers = new Headers({ 'Content-Type': 'application/json', 'UserId': id});
     let options = new RequestOptions({ headers: headers });
     let url: string = 'http://hhc-2017.scalingo.io/meeting';
 
