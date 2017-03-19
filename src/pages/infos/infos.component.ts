@@ -6,7 +6,8 @@ import { NavController }   from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 import { NeedsComponent }  from '../needs/needs.component';
-import { BadgesComponent }   from '../badges/badges.component';
+import { BadgesComponent } from '../badges/badges.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'infos',
@@ -15,12 +16,12 @@ import { BadgesComponent }   from '../badges/badges.component';
 
 export class InfosComponent
 {
-    constructor
-    (
-        private navController: NavController
-    ) { }
+  constructor
+  (
+    private navController: NavController
+  ) { }
 
-    redirect(component : string) : void {
+  redirect(component : string) : void {
     switch(component) {
       case 'infos':
         break;
@@ -32,4 +33,11 @@ export class InfosComponent
         break;
     }
   }
+
+  disconnect() : void {
+    localStorage.removeItem("user");
+    this.navController.push(SignUpComponent);
+
+  }
 }
+
