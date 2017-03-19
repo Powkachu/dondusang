@@ -1,23 +1,33 @@
 .stock-near {
-	background: url('imgs/sprite2.svg') no-repeat -310px -28px;
+	background: url($image-path+'/sprite2.svg') no-repeat -310px -28px;
 	width: 303px;
 	height: 500px;
 }
 
 .conservation {
-	background: url('imgs/sprite2.svg') no-repeat -637px -27px;
+	background: url($image-path+'/sprite2.svg') no-repeat -637px -27px;
 	width: 301px;
 	height: 204px;
 }
 
 .compatibilite {
-	background: url('imgs/sprite2.svg') no-repeat -642px -252px;
+	background: url($image-path+'/sprite2.svg') no-repeat -642px -252px;
 	width: 303px;
 	height: 298px;
 }
 
 .repartition {
-	background: url('imgs/sprite2.svg') no-repeat -975px -24px;
+	background: url($image-path+'/sprite2.svg') no-repeat -975px -24px;
 	width: 302px;
 	height: 563px;
+}
+
+.infos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infos-container div {
+  margin-top: 30px;
 }
