@@ -1,0 +1,17 @@
+.play-button.fb {
+  background-color: #3B5998;
+  box-shadow: 2px 2px 0px 2px #293F66;
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.fb-logo {
+	background: url($image-path+'/sprite1.svg') no-repeat -316px -183px;
+	width: 19px;
+	height: 35px;
+  margin-right: 40px;
+  margin-top: 10px;
+}

@@ -4,7 +4,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { NeedsService } from './needs.service';
 import { User } from '../../models/user';
-import { BadgesComponent} from '../badges/badges.component';
+import { BadgesComponent } from '../badges/badges.component';
+import { AchievementComponent } from '../achievement/achievement.component';
 
 @Component({
   selector: 'needs',
@@ -46,6 +47,11 @@ export class NeedsComponent {
 
 
     }
+  }
+
+  next() : void {
+    this.navController.push(AchievementComponent);
+
   }
 
 }
